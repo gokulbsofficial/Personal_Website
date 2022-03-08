@@ -1,15 +1,5 @@
 # gokulsreejith
 
->  my personal website using html css js bootsrap and php, with motivation  of nikhhil sir from [crossroads](https://www.youtube.com/channel/UCoGHeFY7jE2OB_TJS_87MOA)
-
-> i used juliocodes tutorial and two website combined to make my personal website
-
-> Get the additional source code 
-
-
-
-
-
 <!-- 
 [![my website](https://gokulsreejith.github.io/ajuprojects/images/mywebsite.png)](https://gokulsreejith.github.io/gokulsreejith/) -->
 
