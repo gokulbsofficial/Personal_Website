@@ -971,10 +971,9 @@
         $("#submit-form").submit((e) => {
             e.preventDefault()
             const name = document.getElementById("name").value;
-            console.log(name);
-            if (['Crytocot'].includes(name)) return false;
+            if (['crytocot'].includes(name.toLocaleLowerCase())) return false;
             $.ajax({
-                url: "https://script.google.com/macros/s/AKfycbzoluXMcRaKnvWclCWt8pT6JJuQouIwqnrkpK3VTCD_WxK4bThn1p2USbGmS3ZfWfGm/exec",
+                url: "https://script.google.com/macros/s/AKfycbybb_qtJP0ofwB_PPBtJmp-dGI9Jc9DlYyRMh9kkFeeGT3JQRrzwqUxofMKp7ZucL6b/exec",
                 data: $("#submit-form").serialize(),
                 method: "post",
                 success: function (response) {
