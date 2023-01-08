@@ -969,11 +969,11 @@
 
     <script>
         $("#submit-form").submit((e) => {
-            e.preventDefault()
-            const name = document.getElementById("name").value;
-            if (['crytocot'].includes(name.toLocaleLowerCase())) return false;
+            e.preventDefault();
+            alert ("Form has been disabled due to some unavoidable issues");
+            return false;
             $.ajax({
-                url: "https://script.google.com/macros/s/AKfycbybb_qtJP0ofwB_PPBtJmp-dGI9Jc9DlYyRMh9kkFeeGT3JQRrzwqUxofMKp7ZucL6b/exec",
+                url: "",
                 data: $("#submit-form").serialize(),
                 method: "post",
                 success: function (response) {
