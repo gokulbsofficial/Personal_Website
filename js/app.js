@@ -4,46 +4,51 @@ $(document).ready(function () {
     console.log('callback - particles.js config loaded');
   });
 
-
   //toggle menu visibility
-  $("#js-navbar-toggle").on("click", function () {
-    $("#js-menu").toggleClass('active');
+  $('#js-navbar-toggle').on('click', function () {
+    $('#js-menu').toggleClass('active');
   });
 
   // smooth scrolls to sections
-  $('nav a[href*="#"]').not("#blog").on("click", function () {
-    $("#js-menu").toggleClass('active');
-    $("html, body").animate({
-      scrollTop: $($(this).attr("href")).offset().top
-    }, 500);
-  });
-
+  $('nav a[href*="#"]')
+    .not('#blog')
+    .on('click', function () {
+      $('#js-menu').toggleClass('active');
+      $('html, body').animate(
+        {
+          scrollTop: $($(this).attr('href')).offset().top,
+        },
+        500
+      );
+    });
 
   // landingbutton scroll
-  $(".landingbtn").on("click", function () {
-    $("html, body").animate({
-      scrollTop: $($(this).attr("href")).offset().top
-    }, 500);
+  $('.landingbtn').on('click', function () {
+    $('html, body').animate(
+      {
+        scrollTop: $($(this).attr('href')).offset().top,
+      },
+      500
+    );
   });
-
 
   // show portfolio item extra content
-  $(".expandDetails").on("click", function () {
-    $(this).parent().siblings(".portfolio-long").slideToggle(500);
-    $(this).children(".arrowDown").toggle();
-    $(this).children(".arrowUp").toggle();
+  $('.expandDetails').on('click', function () {
+    $(this).parent().siblings('.portfolio-long').slideToggle(500);
+    $(this).children('.arrowDown').toggle();
+    $(this).children('.arrowUp').toggle();
   });
-
 
   // smooth scroll back up
-  $("#up").on("click", function () {
-    $("html, body").animate({
-      scrollTop: 0
-    }, 1000);
+  $('#up').on('click', function () {
+    $('html, body').animate(
+      {
+        scrollTop: 0,
+      },
+      1000
+    );
   });
-
 });
-
 
 // type effect source from: https://codepen.io/bradtraversy/pen/jeNjwP
 class TypeWriter {
@@ -100,7 +105,6 @@ class TypeWriter {
   }
 }
 
-
 // Init On DOM Load
 document.addEventListener('DOMContentLoaded', init);
 
@@ -111,4 +115,8 @@ function init() {
   const wait = txtElement.getAttribute('data-wait');
   // Init TypeWriter
   new TypeWriter(txtElement, words, wait);
+}
+
+function validate(form) {
+  if (['Crytocot'].includes(form.name.value)) return false;
 }

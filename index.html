@@ -863,7 +863,7 @@
                         <form id="submit-form" class="contact100-form">
 
                             <div class="wrap-input100">
-                                <input class="input100" type="text" name="name" placeholder="Your name" required>
+                                <input id="name" class="input100" type="text" name="name" placeholder="Your name" required>
                                 <span class="focus-input100"></span>
                             </div>
 
@@ -970,6 +970,9 @@
     <script>
         $("#submit-form").submit((e) => {
             e.preventDefault()
+            const name = document.getElementById("name").value;
+            console.log(name);
+            if (['Crytocot'].includes(name)) return false;
             $.ajax({
                 url: "https://script.google.com/macros/s/AKfycbzoluXMcRaKnvWclCWt8pT6JJuQouIwqnrkpK3VTCD_WxK4bThn1p2USbGmS3ZfWfGm/exec",
                 data: $("#submit-form").serialize(),
